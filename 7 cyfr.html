@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<div id="strona">
+    <h1>Podaj cyfry</h1>
+    <form id="form">
+        cyfra 1 <input type="number" id="one" min="-9" max="9"><br>
+        cyfra 2 <input type="number" id="two" min="-9" max="9"><br>
+        cyfra 3 <input type="number" id="three" min="-9" max="9"><br>
+        cyfra 4 <input type="number" id="four" min="-9" max="9"><br>
+        cyfra 5 <input type="number" id="five" min="-9" max="9"><br>
+        cyfra 6 <input type="number" id="six" min="-9" max="9"><br>
+        cyfra 7 <input type="number" id="seven" min="-9" max="9"><br>
+    </form>
+    <input type="submit" onclick="largest()" value="Check">
+    <div id="Script"></div>
+
+
+</div>
+<script>
+    function largest() {
+
+        var one = document.getElementById("one");
+        var two = document.getElementById("two");
+        var three = document.getElementById("three");
+        var four = document.getElementById("four");
+        var five = document.getElementById("five");
+        var six = document.getElementById("six");
+        var seven = document.getElementById("seven");
+
+
+        var array = [document.getElementById(one), document.getElementById(two), document.getElementById(three),
+            document.getElementById(four), document.getElementById(five), document.getElementById(six),
+            document.getElementById(seven)];
+        var largest = array[0];
+        for (var i = 0; i < array.length; i++) {
+            if (largest < array[i]) {
+                largest = array[i]
+            }
+
+        }
+        Script.innerHTML=largest.value;
+
+
+    }
+
+
+</script>
+
+</body>
+</html>
